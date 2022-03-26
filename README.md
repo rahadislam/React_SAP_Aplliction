@@ -1,6 +1,6 @@
 # Red Rose Gagets
 
-web link: [Create React App](https://shiny-daffodil-541f59.netlify.app/).
+web link: [Red rose](https://shiny-daffodil-541f59.netlify.app/).
 
 ## Available Scripts
 
