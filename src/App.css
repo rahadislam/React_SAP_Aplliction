@@ -35,14 +35,16 @@
   }
 }
 .shop_details{
-  display: flex;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 .products_design{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-column-gap: 20px;
-  padding: 0 40px;
+  padding: 0 30px;
 }
+
 .cart_details{
   position: sticky;
   top: 0;
@@ -75,4 +77,17 @@
 }
 .random{
   margin-top: 20px;
+}
+@media screen and (max-width:667px) {
+  .products_design{
+      grid-template-columns: repeat(1, 1fr);
+      margin-left: 90px;
+  }
+  .shop_details{
+    grid-template-columns: 1fr;
+  }
+  .cart_details{
+    margin-left: 90px;
+  }
+
 }

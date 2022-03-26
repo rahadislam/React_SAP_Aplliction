@@ -1,11 +1,12 @@
 .cart{
     width: 300px;
-    Height: 550px;
+    Height: 470px;
     border: 1px solid #95A0A7;
     border-radius: 5px;
     color: #0E161A;
     margin: 20px 0;
     position: relative;
+    text-align: center;
     
 }
 .cart img{
@@ -16,23 +17,25 @@
 .cart .btn{
     width: 300px;
     text-align: center;
-    background-color: #FFE0B3;
     position: absolute;
     bottom: 0;
 }
 .cart .btn button{
-    color: #0E161A;
-    background-color: transparent;
+    color: #000000;
+    background-color: rgb(224, 221, 28);
+    border-radius: 10px;
     border:none;
+    padding: 5px 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
     cursor: pointer;
+}
+.cart .btn button:hover{
+    background-color: rgb(254, 255, 254);
+    border: 2px solid black;
 }
 .cart .information{
     margin: 5px;
-}
-.cart h6{
-    margin-bottom: 40px;
-}
-.cart .headline{
 }
 .cart p{
     color: #2A414F;
