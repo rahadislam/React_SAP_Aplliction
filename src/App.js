@@ -18,6 +18,8 @@ function App() {
       const handelar=(values)=>{
       const newcart=[...carts,values];
         setcarts(newcart);
+
+        
     
        }
        
@@ -31,7 +33,8 @@ function App() {
         carts.map(cart=><Cart cart={cart}></Cart>)
       }
         
-      
+      <button className='btn_lucky'>CHOOSE 1 FOR ME</button>
+      <button className='btn_rest'>CHOOSE AGAIN</button>
       
       </div>
       

@@ -3,15 +3,6 @@ import './Cart.css';
 
 const Cart = ({cart}) => {
     const {name,price,img}=cart;
-    // let name;
-    // let price;
-    // let img;
-    // for(const cartinfo of cart){
-    //     console.log(cartinfo);
-    //     name=cartinfo.name;
-    //     price=cartinfo.price;
-    //     img=cartinfo.img;
-    // }
 
 
     return (
@@ -19,7 +10,7 @@ const Cart = ({cart}) => {
             <div className='cartShow'>
                 <img src={img} alt="" />
                 <span>{name}</span>
-                <span>{price}</span>
+                <span>${price}</span>
 
             </div>
        
