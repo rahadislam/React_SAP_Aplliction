@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Red Rose Gagets
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+web link: [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
