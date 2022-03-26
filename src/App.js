@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header/Header';
+import Shop from './components/Shop/Shop';
+import { useEffect, useState } from 'react';
+import Cart from './components/Cart/Cart';
 
 function App() {
+       const [products,setProduct]=useState([]);
+       useEffect(()=>{
+         fetch('data.json')
+         .then(res=>res.json())
+         .then(data=>setProduct(data))
+       },[]);
+
+      const [carts,setcarts]=useState([])
+
+      const handelar=(values)=>{
+      const newcart=[...carts,values];
+        setcarts(newcart);
+    
+       }
+       
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className='cart_details'>
+        
+      <h1> Shop all Details </h1>
+      {
+        carts.map(cart=><Cart cart={cart}></Cart>)
+      }
+        
+      
+      
+      </div>
+      
+      <div className='products_design'>
+      {
+        products.map(product=><Shop 
+          key={product.id} 
+          event={handelar}
+          name={product}></Shop>)
+      }
+      </div>
+      
+      
     </div>
   );
 }

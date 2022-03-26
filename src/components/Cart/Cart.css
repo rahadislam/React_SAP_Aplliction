@@ -1,0 +1,23 @@
+.cart_details{
+    position: sticky;
+    top: 0;
+    width: 300px;
+    background-color: aliceblue;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    z-index: 9999;
+}
+.cartShow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartShow img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.cartShow span{
+    margin-right: 20px;
+}
