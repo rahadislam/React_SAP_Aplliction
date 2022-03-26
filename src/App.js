@@ -18,11 +18,13 @@ function App() {
 
       const handelar=(values)=>{
         const newcart=[...carts,values];
-        setcarts(newcart);
+        if(newcart.length>4){
+          alert('you already 4 item selected');
+        }
+        else{
+          setcarts(newcart);
+        }
         
-      
-
-        // console.log(carts);
     
        }
        const [randoms,setrandom]=useState([])
@@ -32,7 +34,7 @@ function App() {
         
        }
        const rest=(carts)=>{
-         carts=[]
+         setcarts([]);
        }
        
   return (
@@ -42,11 +44,11 @@ function App() {
         
       <h1> Shop all Details </h1>
       {
-        carts.map(cart=><Cart key={cart.id} cart={cart}></Cart>)
+        carts.map(cart=><Cart key={cart.id} rest={rest} cart={cart}></Cart>)
       }
         
-      <button className='btn_lucky' onClick={()=>addRandom(carts)}>CHOOSE 1 FOR ME</button>
-      <button className='btn_rest' onClick={()=>rest(carts)}>CHOOSE AGAIN</button>
+      <button className='btn_lucky' onClick={addRandom}>CHOOSE 1 FOR ME</button>
+      <button className='btn_rest' onClick={rest}>CHOOSE AGAIN</button>
       <div className='random'>
       <Random name={randoms}></Random>
       </div>
