@@ -40,20 +40,9 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <div className='cart_details'>
-        
-      <h1> Shop all Details </h1>
-      {
-        carts.map(cart=><Cart key={cart.id} rest={rest} cart={cart}></Cart>)
-      }
-        
-      <button className='btn_lucky' onClick={addRandom}>CHOOSE 1 FOR ME</button>
-      <button className='btn_rest' onClick={rest}>CHOOSE AGAIN</button>
-      <div className='random'>
-      <Random name={randoms}></Random>
-      </div>
       
-      </div>
+      <div className='shop_details'>
+
       
       <div className='products_design'>
       {
@@ -63,8 +52,24 @@ function App() {
           name={product}></Shop>)
       }
       </div>
+      <div>
+      <div className='cart_details'>
+        
+        <h1> Shop all Details </h1>
+        {
+          carts.map(cart=><Cart key={cart.id} rest={rest} cart={cart}></Cart>)
+        }
+          
+        <button className='btn_lucky' onClick={addRandom}>CHOOSE 1 FOR ME</button>
+        <button className='btn_rest' onClick={rest}>CHOOSE AGAIN</button>
+        <div className='random'>
+        <Random name={randoms}></Random>
+        </div>
+      </div>
       
+      </div>
       
+      </div>
     </div>
   );
 }

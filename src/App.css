@@ -34,17 +34,20 @@
     transform: rotate(360deg);
   }
 }
+.shop_details{
+  display: flex;
+}
 .products_design{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  padding: 0 140px;
+  grid-column-gap: 20px;
+  padding: 0 40px;
 }
 .cart_details{
   position: sticky;
   top: 0;
   width: 300px;
   background-color: aliceblue;
-  margin: auto;
   text-align: center;
   border-radius: 10px;
   padding: 15px;
