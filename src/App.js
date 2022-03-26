@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Shop from './components/Shop/Shop';
 import { useEffect, useState } from 'react';
 import Cart from './components/Cart/Cart';
+import Random from './components/Random/Random';
 
 function App() {
        const [products,setProduct]=useState([]);
@@ -16,11 +17,22 @@ function App() {
       const [carts,setcarts]=useState([])
 
       const handelar=(values)=>{
-      const newcart=[...carts,values];
+        const newcart=[...carts,values];
         setcarts(newcart);
-
         
+      
+
+        // console.log(carts);
     
+       }
+       const [randoms,setrandom]=useState([])
+       const addRandom=()=>{
+        const random = carts[Math.floor(Math.random() * carts.length)]; 
+          setrandom(random);
+        
+       }
+       const rest=(carts)=>{
+         carts=[]
        }
        
   return (
@@ -30,11 +42,14 @@ function App() {
         
       <h1> Shop all Details </h1>
       {
-        carts.map(cart=><Cart cart={cart}></Cart>)
+        carts.map(cart=><Cart key={cart.id} cart={cart}></Cart>)
       }
         
-      <button className='btn_lucky'>CHOOSE 1 FOR ME</button>
-      <button className='btn_rest'>CHOOSE AGAIN</button>
+      <button className='btn_lucky' onClick={()=>addRandom(carts)}>CHOOSE 1 FOR ME</button>
+      <button className='btn_rest' onClick={()=>rest(carts)}>CHOOSE AGAIN</button>
+      <div className='random'>
+      <Random name={randoms}></Random>
+      </div>
       
       </div>
       

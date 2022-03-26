@@ -58,6 +58,7 @@
   border-radius: 5px;
   font-weight: bold;
   margin-right: 10px;
+  cursor: pointer;
 }
 .btn_rest{
   padding: 10px 10px;
@@ -67,4 +68,8 @@
   border-radius: 5px;
   font-weight: bold;
   margin-right: 10px;
+  cursor: pointer;
+}
+.random{
+  margin-top: 20px;
 }
